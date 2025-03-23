@@ -143,8 +143,8 @@ function AdminApproval({ supabase }) {
             <Grid container alignItems="center" spacing={2}>
               <Grid item xs={12}>
                 <ListItemText
-                  primary={`${request.subject} - ${request.caseDescription}`}
-                  secondary={`Amount: $${request.amount_required} | Urgency: ${request.urgency_level} | Importance: ${request.importance_level} | Status: ${request.status}`}
+                  primary={<b>{request.subject}</b>}
+                  secondary={`Amount: ${request.amount_required} ${request.currency} | Urgency: ${request.urgency_level} | Importance: ${request.importance_level} | Status: ${request.status}`}
                 />
               </Grid>
               <Grid item xs={12} sm={4}>

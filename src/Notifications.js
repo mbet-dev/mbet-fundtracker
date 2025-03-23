@@ -52,8 +52,8 @@ function Notifications({ supabase }) {
         {fundRequests.map((request) => (
           <ListItem key={request.id}>
             <ListItemText
-              primary={request.case_description}
-              secondary={`Status: ${request.status}`}
+              primary={<b>{request.case_description}</b>}
+              secondary={`Amount: ${request.status === 'pending' || request.amount_approved === null ? request.amount_required : request.amount_approved} ${request.currency} | Status: ${request.status}`}
             />
           </ListItem>
         ))}
