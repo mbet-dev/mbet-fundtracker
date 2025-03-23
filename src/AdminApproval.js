@@ -16,7 +16,7 @@ function AdminApproval({ supabase }) {
     try {
       const { data, error } = await supabase
         .from('fund_requests')
-        .select('id, subject, case_description, amount_required, urgency_level, importance_level, status')
+        .select('id, subject, case_description, amount_required, currency, urgency_level, importance_level, status')
         .eq('status', 'pending');
 
       if (error) {
@@ -142,9 +142,9 @@ function AdminApproval({ supabase }) {
           <ListItem key={request.id} divider>
             <Grid container alignItems="center" spacing={2}>
               <Grid item xs={12}>
-                <ListItemText
+<ListItemText
                   primary={<b>{request.subject}</b>}
-                  secondary={`Amount: ${request.amount_required} ${request.currency} | Urgency: ${request.urgency_level} | Importance: ${request.importance_level} | Status: ${request.status}`}
+                  secondary={`Amount: ${request.amount_required} ${request.currency ? request.currency : 'USD'} | Urgency: ${request.urgency_level} | Importance: ${request.importance_level} | Status: ${request.status}`}
                 />
               </Grid>
               <Grid item xs={12} sm={4}>
