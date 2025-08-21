@@ -1,4 +1,5 @@
-# Getting Started with Create React App
+# (Mini) Fund-Enquiry, Fund-Tracking and Fund-Requests-Appraisal React App intended for the MBet-Team
+###   Web-App created with ** React * App **
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -41,6 +42,6 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 
 # MBet-FundTracker
-# mbet-fundtracker- ErmiasD.
-# mbet-fundtracker- ErmiasD.
-# mbet-fundtracker by ErmiasD.
+# mbet-fundtracker- Ermias-D.
+
+# mbet-fundtracker (developed as a proto-type) by Ermias-D.
